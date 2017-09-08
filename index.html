@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>tlx & hyh's love story</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+  @keyframes float {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @keyframes shadow {
+    to {
+      transform: scale(1.2);
+    }
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    44% {
+      transform: scale(1.03);
+    }
+    50% {
+      transform: scale(1);
+    }
+    52% {
+      transform: scale(1.04);
+    }
+    58% {
+      transform: scale(1);
+    }
+  }
+  heart {
+    animation: float 0.8s cubic-bezier(0, 0.5, 0.5, 1) infinite alternate;
+    position: absolute;
+    z-index: -10;
+  }
+  heart div.beat {
+    animation: heartbeat 1.6s infinite;
+    content: '';
+    display: block;
+  }
+  heart left {
+    height: 100px;
+    width: 100px;
+    background: #bd1521;
+    border-radius: 100%;
+    content: '';
+    display: block;
+  }
+  heart right {
+    height: 100px;
+    width: 100px;
+    background: #bd1521;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    transform: translate(70px, -100px);
+  }
+  heart bottom {
+    height: 100px;
+    width: 100px;
+    background: #bd1521;
+    border-bottom-right-radius: 10px;
+    content: '';
+    display: block;
+    transform: rotate(45deg) translate(-92px, -141px);
+  }
+
+  shadow {
+    animation: shadow 0.8s cubic-bezier(0, 0.5, 0.5, 1) infinite alternate;
+    background: #c7c7c7;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 175px;
+    left: 60px;
+    height: 12px;
+    width: 50px;
+  }
+
+  love {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-85px, -85px);
+  }
+
+  p {
+    color: #323232;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    left: 20px;
+    position: relative;
+    text-decoration: none;
+    top: 200px;
+  }
+  p:hover {
+    color: #c7c7c7;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>LOVE STORY</h1>
+  <h4>❤️-tlx 2017-08-13 hyh-❤️</h4>
+
+  <main class="scene">
+    <div class="actor">
+      <div class="actor__prefix">-</div>
+      <div id="tlx" class="actor__content"></div>
+    </div>
+    <div class="actor">
+      <div class="actor__prefix">-</div>
+      <div id="hyh" class="actor__content"></div>
+    </div>
+
+    <love>
+      <heart>
+        <div class="beat">
+          <a href="https://photos.google.com/share/AF1QipPes-ph5VBO22_L3A2rPNGe_dg9MdwDF8ahb83RXXnyrnxzPw1gWtvfVuAQr8QKTQ?key=VVZmWE05UjZ5QjdVWFY3dkFQU2tENENhMkZfY1pR" target="_blank">
+            <left></left>
+            <right></right>
+            <bottom></bottom>
+          </a>
+        </div>
+      </heart>
+      <shadow></shadow>
+    </love>
+
+    <div id="timer">
+      <span id="days"></span>days
+      <span id="hours"></span>hours
+      <span id="minutes"></span>minutes
+      <span id="seconds"></span>seconds
+    </div>
+  </main>
+
+  <script src='http://cdn.jsdelivr.net/theaterjs/latest/theater.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
