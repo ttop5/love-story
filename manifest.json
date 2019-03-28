@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "LOVE STORY",
-  "version": "1.00",
+  "version": "1.0.0",
   "description": "tlx和hyh的恋爱日记",
 
   "browser_action": {
